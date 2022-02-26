@@ -1,0 +1,42 @@
+---
+title: "Incarceration Rate by Race"
+author: "Ximing Sun"
+date: "2/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Racial discrimination is a universal problem. From the perspective of the world, as long as there are different races, there will be racial discrimination. White, black, yellow, European, American, Asian, there are different degrees of discrimination among each other, some with respect on the outside and contempt on the inside, some with deep hostility. Social unrest over racial discrimination has led to frequent protests.Therefore, I hope to use my data and charts on the **incarceration rate of black race from 1990 to 2018 to show the unequal treatment of black race** based on **black race prision admission rate** and **total black people population**, so that the public can pay more attention to this problem and solve it fundamentally. 
+
+
+## black race incarceration rate throughout the years the trend overtime
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/incarceration rate.R")
+plot(trends)
+```
+
+This chart calculate the rate of prision admission for black race in 1990, 1995, 2000, 20005, 2010 and 2016，clearly shows the trend in black incarceration rates. The highest incarceration rate occured in **`r max_black_pri_adm_year`** and in 2016, the most recent year for which data are available, the black incarceration rate was **`r recent_black_pri_adm_pop `** , which refects discrimination against black race is on the decline.
+
+## Black Race versus White Race incarceration rates from 1995 to 2016
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/incarceration rate.R")
+plot(chart)
+```
+
+The injustice suffered by blacks is reflected in this chart showing by annual comparison of black and white prison admission rates. It can be seen from the statistics that in 1995, the black incarceration rate was about one percent (**`r black_pri_adm_rate_1995`**), which seems small, but in the same year, the white incarceration rate was only about 0.1 percent (**`r white_pri_adm_rate_1995`**), the two figures are nearly ten times different.This stark contrast highlights the differences between the two, reflecting the high incarceration rates of black race.
+
+## Black Race incarcertion rate by region
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/incarceration rate.R")
+plot(rate_by_state)
+```
+
+This map shows the black race incarceration rates in each state, with darker colors representing lower incarceration rates and lighter colors representing higher incarceration rates. Geographically, **`r max_black_pri_rate_state`** has the highest rate of black incarceration, reflecting racial discrimination in the state. Here, I hope to use my data and charts on the incarceration rate of black people from 1990 to 2018 to show the unequal treatment of black people, so that the public can pay more attention to this problem and solve it fundamentally. 
+
