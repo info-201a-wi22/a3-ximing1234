@@ -34,20 +34,7 @@ prison_admission <- incarceration_trends %>%
 time_trends_df <- prison_admission %>%
   filter(year == "1990" | year == "1995" | year == "2000" |year == "2005" |year == "2010" | year == "2016")
 
-# combine the data
-black <- prison_admission %>%
-  select(year, black_prison_admission_rate) %>%
-  mutate(rate = black_prison_admission_rate, skin_color = "black") %>%
-  select(year, rate, skin_color)
-
-white <- prison_admission %>%
-  select(year, white_prison_admission_rate) %>%
-  mutate(rate = white_prison_admission_rate, skin_color = "white") %>%
-  select(year, rate, skin_color)
-
-black_white_prison_adm <- rbind(black, white)
-
-# Black people Prison Admission Population according to the county
+# Black race Prison Admission Population according to the county
 black_pri_rate_state <- incarceration_trends %>%
   group_by(state)%>%
   summarize(total_black_prison_pop = sum(black_prison_pop, na.rm = TRUE), total_state_black_pop = sum(black_pop_15to64,na.rm = TRUE))%>%
