@@ -16,7 +16,7 @@ Racial discrimination is a universal problem. From the perspective of the world,
 
 ## black race incarceration rate throughout the years the trend overtime
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../source/incarceration rate.R")
+source("../source/analysis.R")
 plot(trends)
 ```
 
@@ -25,7 +25,7 @@ This chart calculate the rate of prision admission for black race in 1990, 1995,
 ## Black Race versus White Race incarceration rates from 1995 to 2016
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../source/incarceration rate.R")
+source("../source/analysis.R")
 plot(chart)
 ```
 
@@ -34,7 +34,7 @@ The injustice suffered by blacks is reflected in this chart showing by annual co
 ## Black Race incarcertion rate by region
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../source/incarceration rate.R")
+source("../source/analysis.R")
 plot(rate_by_state)
 ```
 
